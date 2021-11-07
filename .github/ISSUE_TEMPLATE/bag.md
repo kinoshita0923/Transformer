@@ -2,8 +2,8 @@
 name: バグレポート
 about: バグが生じたときに使う
 title: ''
-labels: ''
-assignees: 'bug'
+labels: 'bug'
+assignees: ''
 
 ---
 
