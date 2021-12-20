@@ -40,11 +40,11 @@ class SensorDataset(Dataset):
         # np.random.seed(0)
 
         start = np.random.randint(0, len(self.df[self.df["reindexed_id"]==idx]) - self.T - self.S) 
-        sensor_number = str(self.df[self.df["reindexed_id"]==idx][["sensor_id"]][start:start+1].values.item())
+        # sensor_number = str(self.df[self.df["reindexed_id"]==idx][["sensor_id"]][start:start+1].values.item())
         index_in = torch.tensor([i for i in range(start, start+self.T)])
         index_tar = torch.tensor([i for i in range(start + self.T, start + self.T + self.S)])
-        _input = torch.tensor(self.df[self.df["reindexed_id"]==idx][["humidity", "sin_hour", "cos_hour", "sin_day", "cos_day", "sin_month", "cos_month"]][start : start + self.T].values)
-        target = torch.tensor(self.df[self.df["reindexed_id"]==idx][["humidity", "sin_hour", "cos_hour", "sin_day", "cos_day", "sin_month", "cos_month"]][start + self.T : start + self.T + self.S].values)
+        _input = torch.tensor(self.df[self.df["reindexed_id"]==idx][["x", "y", "credibility"]][start : start + self.T].values)
+        target = torch.tensor(self.df[self.df["reindexed_id"]==idx][["x", "y", "credibility"]][start + self.T : start + self.T + self.S].values)
 
         # scalar is fit only to the input, to avoid the scaled values "leaking" information about the target range.
         # scalar is fit only for humidity, as the timestamps are already scaled
@@ -58,4 +58,4 @@ class SensorDataset(Dataset):
         # save the scalar to be used later when inverse translating the data for plotting.
         dump(scaler, 'scalar_item.joblib')
 
-        return index_in, index_tar, _input, target, sensor_number
+        return index_in, index_tar, _input, target
