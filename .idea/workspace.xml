@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="配列の次元の扱い方がわからない">
+    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="引数の個数でエラーになる">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" afterDir="false" />
     </list>
@@ -84,7 +86,7 @@
       <workItem from="1640063230446" duration="170000" />
       <workItem from="1640063424152" duration="1590000" />
       <workItem from="1640069979298" duration="1131000" />
-      <workItem from="1640087956392" duration="2392000" />
+      <workItem from="1640087956392" duration="6144000" />
     </task>
     <task id="LOCAL-00001" summary="to_csv.pyで正しくデータを扱えるようにした">
       <created>1639484623158</created>
@@ -107,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640011013409</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="引数の個数でエラーになる">
+      <created>1640131293075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640131293076</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +138,7 @@
     <MESSAGE value="to_csv.pyで正しくデータを扱えるようにした" />
     <MESSAGE value="gitignoreを修正した" />
     <MESSAGE value="配列の次元の扱い方がわからない" />
-    <option name="LAST_COMMIT_MESSAGE" value="配列の次元の扱い方がわからない" />
+    <MESSAGE value="引数の個数でエラーになる" />
+    <option name="LAST_COMMIT_MESSAGE" value="引数の個数でエラーになる" />
   </component>
 </project>

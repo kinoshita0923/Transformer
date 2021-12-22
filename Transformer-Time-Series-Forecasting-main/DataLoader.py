@@ -39,7 +39,7 @@ class SensorDataset(Dataset):
 
         # np.random.seed(0)
 
-        start = np.random.randint(0, len(self.df[self.df["reindexed_id"]==idx]) - self.T - self.S) 
+        start = np.random.randint(0, len(self.df[self.df["reindexed_id"]==idx]) - self.T - self.S)
         # sensor_number = str(self.df[self.df["reindexed_id"]==idx][["sensor_id"]][start:start+1].values.item())
         index_in = torch.tensor([i for i in range(start, start+self.T)])
         index_tar = torch.tensor([i for i in range(start + self.T, start + self.T + self.S)])

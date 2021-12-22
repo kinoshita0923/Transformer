@@ -12,13 +12,13 @@ class Transformer(nn.Module):
     def __init__(self,feature_size=3,num_layers=3,dropout=0):
         super(Transformer, self).__init__()
 
-        self.encoder_layer = nn.TransformerEncoderLayer(d_model=feature_size, nhead=7, dropout=dropout)
+        self.encoder_layer = nn.TransformerEncoderLayer(d_model=feature_size, nhead=3, dropout=dropout)
         self.transformer_encoder = nn.TransformerEncoder(self.encoder_layer, num_layers=num_layers)        
         self.decoder = nn.Linear(feature_size,1)
         self.init_weights()
 
     def init_weights(self):
-        initrange = 0.1    
+        initrange = 0.1
         self.decoder.bias.data.zero_()
         self.decoder.weight.data.uniform_(-initrange, initrange)
 
@@ -33,5 +33,3 @@ class Transformer(nn.Module):
         output = self.transformer_encoder(src,mask)
         output = self.decoder(output)
         return output
-        
-
