@@ -43,7 +43,7 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
             optimizer.zero_grad()
             src = _input.permute(1,0,2).double().to(device)[:-1,:,:]
             target = _input.permute(1,0,2).double().to(device)[1:,:,:]
-            sampled_src = src[:1, :, :]
+            sampled_src = src[0, 0]
 
             for i in range(len(target)-1):
 

@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="">
+    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="配列の次元の扱い方がわからない">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_raw.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_raw.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" afterDir="false" />
     </list>
@@ -87,7 +80,11 @@
       <workItem from="1639529156782" duration="665000" />
       <workItem from="1639549471635" duration="7000" />
       <workItem from="1639571938623" duration="105000" />
-      <workItem from="1640001227806" duration="3531000" />
+      <workItem from="1640001227806" duration="4115000" />
+      <workItem from="1640063230446" duration="170000" />
+      <workItem from="1640063424152" duration="1590000" />
+      <workItem from="1640069979298" duration="1131000" />
+      <workItem from="1640087956392" duration="2392000" />
     </task>
     <task id="LOCAL-00001" summary="to_csv.pyで正しくデータを扱えるようにした">
       <created>1639484623158</created>
@@ -103,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639571997312</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="配列の次元の扱い方がわからない">
+      <created>1640011013409</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640011013409</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +128,7 @@
     <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
     <MESSAGE value="to_csv.pyで正しくデータを扱えるようにした" />
     <MESSAGE value="gitignoreを修正した" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignoreを修正した" />
+    <MESSAGE value="配列の次元の扱い方がわからない" />
+    <option name="LAST_COMMIT_MESSAGE" value="配列の次元の扱い方がわからない" />
   </component>
 </project>
