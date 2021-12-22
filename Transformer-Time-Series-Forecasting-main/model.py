@@ -9,10 +9,10 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 
 class Transformer(nn.Module):
     # d_model : number of features
-    def __init__(self,feature_size=3,num_layers=3,dropout=0):
+    def __init__(self,feature_size=2,num_layers=2,dropout=0):
         super(Transformer, self).__init__()
 
-        self.encoder_layer = nn.TransformerEncoderLayer(d_model=feature_size, nhead=3, dropout=dropout)
+        self.encoder_layer = nn.TransformerEncoderLayer(d_model=feature_size, nhead=2, dropout=dropout)
         self.transformer_encoder = nn.TransformerEncoder(self.encoder_layer, num_layers=num_layers)        
         self.decoder = nn.Linear(feature_size,1)
         self.init_weights()
