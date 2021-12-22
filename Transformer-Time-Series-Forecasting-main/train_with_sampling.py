@@ -43,7 +43,7 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
             optimizer.zero_grad()
             src = _input.permute(1,0,2).double().to(device)[:-1,:,:]
             target = _input.permute(1,0,2).double().to(device)[1:,:,:]
-            sampled_src = torch.tensor([[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]])
+            sampled_src = src[:1, :, :]
 
             for i in range(len(target)-1):
 
@@ -97,7 +97,7 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
             src_humidity = scaler.inverse_transform(src[:,:,0].cpu()) #torch.Size([35, 1, 7])
             target_humidity = scaler.inverse_transform(target[:,:,0].cpu()) #torch.Size([35, 1, 7])
             prediction_humidity = scaler.inverse_transform(prediction[:,:,0].detach().cpu().numpy()) #torch.Size([35, 1, 7])
-            plot_training_3(epoch, path_to_save_predictions, src_humidity, sampled_src_humidity, prediction_humidity, sensor_number, index_in, index_tar)
+            plot_training_3(epoch, path_to_save_predictions, src_humidity, sampled_src_humidity, prediction_humidity, index_in, index_tar)
 
         train_loss /= len(dataloader)
         log_loss(train_loss, path_to_save_loss, train=True)

@@ -31,7 +31,7 @@ def main(
     test_dataloader = DataLoader(test_dataset, batch_size=1, shuffle=True)
 
     best_model = transformer(train_dataloader, epoch, k, frequency, path_to_save_model, path_to_save_loss, path_to_save_predictions, device)
-    # inference(path_to_save_predictions, forecast_window, test_dataloader, device, path_to_save_model, best_model)
+    inference(path_to_save_predictions, forecast_window, test_dataloader, device, path_to_save_model, best_model)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
