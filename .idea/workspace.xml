@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="引数の個数でエラーになる">
+    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="扱うcsvファイルを修正">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_0.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_0.pth" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/to_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/to_csv.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640131293076</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="扱うcsvファイルを修正">
+      <created>1640183962924</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640183962925</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +154,7 @@
     <MESSAGE value="gitignoreを修正した" />
     <MESSAGE value="配列の次元の扱い方がわからない" />
     <MESSAGE value="引数の個数でエラーになる" />
-    <option name="LAST_COMMIT_MESSAGE" value="引数の個数でエラーになる" />
+    <MESSAGE value="扱うcsvファイルを修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="扱うcsvファイルを修正" />
   </component>
 </project>
