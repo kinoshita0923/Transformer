@@ -35,15 +35,15 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
 
         ## TRAIN -- TEACHER FORCING
         model.train()
-        for index_in, index_tar, _input, target, sensor_number in dataloader:
-        
+        for index_in, index_tar, _input, target in dataloader:
+
             # Shape of _input : [batch, input_length, feature]
             # Desired input for model: [input_length, batch, feature]
 
             optimizer.zero_grad()
-            src = _input.permute(1,0,2).double().to(device)[:-1,:,:] # torch.Size([24, 1, 7])
-            target = _input.permute(1,0,2).double().to(device)[1:,:,:] # src shifted by 1.
-            sampled_src = src[:1, :, :] #t0 torch.Size([1, 1, 7])
+            src = _input.permute(1,0,2).double().to(device)[:-1,:,:]
+            target = _input.permute(1,0,2).double().to(device)[1:,:,:]
+            sampled_src = src[:1, :, :]
 
             for i in range(len(target)-1):
 
@@ -75,7 +75,7 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
                     positional_encodings_new_val = src[i+1,:,1:].unsqueeze(0)
                     predicted_humidity = torch.cat((prediction[-1,:,:].unsqueeze(0), positional_encodings_new_val), dim=2)
                     sampled_src = torch.cat((sampled_src.detach(), predicted_humidity.detach()))
-            
+
             """To update model after each sequence"""
             loss = criterion(target[:-1,:,0].unsqueeze(-1), prediction)
             loss.backward()
@@ -97,10 +97,10 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
             src_humidity = scaler.inverse_transform(src[:,:,0].cpu()) #torch.Size([35, 1, 7])
             target_humidity = scaler.inverse_transform(target[:,:,0].cpu()) #torch.Size([35, 1, 7])
             prediction_humidity = scaler.inverse_transform(prediction[:,:,0].detach().cpu().numpy()) #torch.Size([35, 1, 7])
-            plot_training_3(epoch, path_to_save_predictions, src_humidity, sampled_src_humidity, prediction_humidity, sensor_number, index_in, index_tar)
+            plot_training_3(epoch, path_to_save_predictions, src_humidity, sampled_src_humidity, prediction_humidity, index_in, index_tar)
 
         train_loss /= len(dataloader)
         log_loss(train_loss, path_to_save_loss, train=True)
-        
+
     plot_loss(path_to_save_loss, train=True)
     return best_model

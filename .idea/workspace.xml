@@ -4,11 +4,75 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="gitignoreを修正した" />
+    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_loss/train_loss.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_0.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_1.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_10.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_13.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_14.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_17.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_18.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_19.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_6.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_7.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_0.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_1.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_10.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_13.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_14.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_17.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_18.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_19.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_6.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_7.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_raw.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_raw.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data12.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data12.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data17.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data17.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data18.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data18.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data19.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data19.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data20.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data20.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data21.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data21.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/json_data9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/to_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/to_csv.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
     <envs>
@@ -24,7 +88,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kinoshita0923/issue_4" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +101,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="22GUjNqTWcq5Y0bBMCIJwJBMhv1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,12 +114,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sota3\python\事例研究\OpenPose\Transformer-Time-Series-Forecasting-main\Data" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,6 +140,11 @@
       <workItem from="1639529156782" duration="665000" />
       <workItem from="1639549471635" duration="7000" />
       <workItem from="1639571938623" duration="105000" />
+      <workItem from="1640001227806" duration="4115000" />
+      <workItem from="1640063230446" duration="170000" />
+      <workItem from="1640063424152" duration="1590000" />
+      <workItem from="1640069979298" duration="1131000" />
+      <workItem from="1640087956392" duration="6144000" />
     </task>
     <task id="LOCAL-00001" summary="to_csv.pyで正しくデータを扱えるようにした">
       <created>1639484623158</created>
@@ -83,7 +160,35 @@
       <option name="project" value="LOCAL" />
       <updated>1639571997312</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="配列の次元の扱い方がわからない">
+      <created>1640011013409</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640011013409</updated>
+    </task>
+    <task id="LOCAL-00004" summary="引数の個数でエラーになる">
+      <created>1640131293075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640131293076</updated>
+    </task>
+    <task id="LOCAL-00005" summary="扱うcsvファイルを修正">
+      <created>1640183962924</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640183962925</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test_dataset.csvを変更">
+      <created>1640190158049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640190158049</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,11 +204,15 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
     <MESSAGE value="to_csv.pyで正しくデータを扱えるようにした" />
     <MESSAGE value="gitignoreを修正した" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignoreを修正した" />
+    <MESSAGE value="配列の次元の扱い方がわからない" />
+    <MESSAGE value="引数の個数でエラーになる" />
+    <MESSAGE value="扱うcsvファイルを修正" />
+    <MESSAGE value="test_dataset.csvを変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="test_dataset.csvを変更" />
   </component>
 </project>
