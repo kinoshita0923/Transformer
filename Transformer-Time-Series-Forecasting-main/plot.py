@@ -95,7 +95,7 @@ def plot_training_3(epoch, path_to_save, src_x, sampled_src_x, prediction_x, src
     plt.plot(idx_sampled_src_x, sampled_src_x, 'o-.', color='red', label = 'sampled source x', linewidth=1, markersize=10)
     plt.plot(idx_scr_x, src_x, 'o-.', color = 'blue', label = 'input sequence x', linewidth=1)
     plt.plot(idx_pred_x, prediction_x, 'o-.', color = 'limegreen', label = 'prediction sequence x', linewidth=1)
-    plt.plot(idx_sampled_src_y, sampled_src_y, 'o-.', color='red', label='sampled source y', linewidth=1, markersize=10)
+    plt.plot(idx_sampled_src_y, sampled_src_y, 'o-.', color='orange', label='sampled source y', linewidth=1, markersize=10)
     plt.plot(idx_scr_y, src_y, 'o-.', color='purple', label='input sequence y', linewidth=1)
     plt.plot(idx_pred_y, prediction_y, 'o-.', color='green', label='prediction sequence y', linewidth=1)
     plt.xlabel("flame")
