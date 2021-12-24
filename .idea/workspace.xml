@@ -4,63 +4,186 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_loss/train_loss.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_0.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_1.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_10.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_13.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_14.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_17.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_18.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_19.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_6.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_7.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_0.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_1.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_10.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_13.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_14.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_17.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_18.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_19.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_6.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_7.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" afterDir="false" />
+    <list default="true" id="80cb14a2-883b-48b7-92f2-9e5cc9d44e7d" name="変更" comment="test_dataset.csvを変更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/test_raw.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Data/train_raw.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/DataLoader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/Preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/helpers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_loss/Train.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_loss/train_loss.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_loss/train_loss.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_0.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_1.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_10.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_100.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_108.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_12.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_13.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_14.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_149.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_16.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_17.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_18.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_2.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_20.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_22.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_3.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_34.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_36.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_4.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_6.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_749.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_78.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/best_train_79.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_0.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_1.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_10.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_100.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_108.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_12.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_13.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_14.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_149.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_16.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_17.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_18.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_2.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_20.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_22.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_3.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_34.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_36.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_4.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_6.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_749.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_78.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_model/optimizer_79.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_170.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_190.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_210.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_220.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_250.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_260.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_270.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_280.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_290.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_310.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_330.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_340.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_350.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_360.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_370.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_380.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_390.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_410.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_420.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_430.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_440.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_450.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_470.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_480.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_490.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_510.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_520.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_530.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_540.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_550.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_560.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_570.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_580.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_590.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_600.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_610.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_620.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_630.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_640.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_650.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_660.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_670.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_680.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_690.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_710.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_720.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_730.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_740.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_750.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_760.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_770.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_780.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_790.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_80.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_810.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_820.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_830.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_840.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_850.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_860.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_870.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_880.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_890.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_900.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_910.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_920.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_930.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_940.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_950.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_960.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_970.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_980.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Epoch_990.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/save_predictions/Prediction_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/scalar_item.joblib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data11.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data12.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data12.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data13.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data14.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data15.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data16.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data17.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data17.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data18.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data18.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data19.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data19.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data20.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data20.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data21.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data21.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/json_data9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/json_data9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/to_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/to_csv.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +268,8 @@
       <workItem from="1640063424152" duration="1590000" />
       <workItem from="1640069979298" duration="1131000" />
       <workItem from="1640087956392" duration="6144000" />
+      <workItem from="1640318132791" duration="1349000" />
+      <workItem from="1640322751544" duration="6070000" />
     </task>
     <task id="LOCAL-00001" summary="to_csv.pyで正しくデータを扱えるようにした">
       <created>1639484623158</created>
@@ -214,5 +339,16 @@
     <MESSAGE value="扱うcsvファイルを修正" />
     <MESSAGE value="test_dataset.csvを変更" />
     <option name="LAST_COMMIT_MESSAGE" value="test_dataset.csvを変更" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Transformer-Time-Series-Forecasting-main/train_with_sampling.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

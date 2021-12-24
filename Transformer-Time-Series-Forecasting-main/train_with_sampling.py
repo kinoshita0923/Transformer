@@ -27,10 +27,12 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
     # scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=200)
     criterion = torch.nn.MSELoss()
     best_model = ""
-    min_train_loss = float('inf')
+    min_train_loss_x = float('inf')
+    min_train_loss_y = float('inf')
 
     for epoch in range(EPOCH + 1):
-        train_loss = 0
+        train_loss_x = 0
+        train_loss_y = 0
         val_loss = 0
 
         ## TRAIN -- TEACHER FORCING
@@ -43,11 +45,13 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
             optimizer.zero_grad()
             src = _input.permute(1,0,2).double().to(device)[:-1,:,:]
             target = _input.permute(1,0,2).double().to(device)[1:,:,:]
-            sampled_src = src[:1, :, :]
+            sampled_src_x = src[:1, :, :]
+            sampled_src_y = src[1:2, :, :]
 
             for i in range(len(target)-1):
 
-                prediction = model(sampled_src, device) # torch.Size([1xw, 1, 1])
+                prediction_x = model(sampled_src_x, device) # torch.Size([1xw, 1, 1])
+                prediction_y = model(sampled_src_y, device)
                 # for p1, p2 in zip(params, model.parameters()):
                 #     if p1.data.ne(p2.data).sum() > 0:
                 #         ic(False)
@@ -70,37 +74,54 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
                     ## if using true value as new value
 
                 if prob_true_val: # Using true value as next value
-                    sampled_src = torch.cat((sampled_src.detach(), src[i+1, :, :].unsqueeze(0).detach()))
+                    sampled_src_x = torch.cat((sampled_src_x.detach(), src[i+1, :, :].unsqueeze(0).detach()))
+                    sampled_src_y = torch.cat((sampled_src_y.detach(), src[i+1, :, :].unsqueeze(0).detach()))
                 else: ## using prediction as new value
                     positional_encodings_new_val = src[i+1,:,1:].unsqueeze(0)
-                    predicted_humidity = torch.cat((prediction[-1,:,:].unsqueeze(0), positional_encodings_new_val), dim=2)
-                    sampled_src = torch.cat((sampled_src.detach(), predicted_humidity.detach()))
+                    predicted_x = torch.cat((prediction_x[-1,:,:].unsqueeze(0), positional_encodings_new_val), dim=2)
+                    predicted_y = torch.cat((prediction_y[-1,:,:].unsqueeze(0), positional_encodings_new_val), dim=2)
+                    sampled_src_x = torch.cat((sampled_src_x.detach(), predicted_x.detach()))
+                    sampled_src_y = torch.cat((sampled_src_y.detach(), predicted_y.detach()))
 
             """To update model after each sequence"""
-            loss = criterion(target[:-1,:,0].unsqueeze(-1), prediction)
-            loss.backward()
+            loss_x = criterion(target[:-1,:,0].unsqueeze(-1), prediction_x)
+            loss_y = criterion(target[:-1,:,1].unsqueeze(-1), prediction_y)
+            loss_x.backward()
+            loss_y.backward()
             optimizer.step()
-            train_loss += loss.detach().item()
+            train_loss_x += loss_x.detach().item()
+            train_loss_y += loss_y.detach().item()
 
-        if train_loss < min_train_loss:
+
+        if train_loss_x < min_train_loss_x:
             torch.save(model.state_dict(), path_to_save_model + f"best_train_{epoch}.pth")
             torch.save(optimizer.state_dict(), path_to_save_model + f"optimizer_{epoch}.pth")
-            min_train_loss = train_loss
+            min_train_loss_x = train_loss_x
             best_model = f"best_train_{epoch}.pth"
 
+        if train_loss_y < min_train_loss_y:
+            torch.save(model.state_dict(), path_to_save_model + f"best_train_{epoch}.pth")
+            torch.save(optimizer.state_dict(), path_to_save_model + f"optimizer_{epoch}.pth")
+            min_train_loss_y = train_loss_y
+            best_model = f"best_train_{epoch}.pth"
 
-        if epoch % 10 == 0: # Plot 1-Step Predictions
+        if epoch % 10 == 0:
 
-            logger.info(f"Epoch: {epoch}, Training loss: {train_loss}")
+            logger.info(f"Epoch: {epoch}, Training loss: {train_loss_x}")
             scaler = load('scalar_item.joblib')
-            sampled_src_humidity = scaler.inverse_transform(sampled_src[:,:,0].cpu()) #torch.Size([35, 1, 7])
-            src_humidity = scaler.inverse_transform(src[:,:,0].cpu()) #torch.Size([35, 1, 7])
-            target_humidity = scaler.inverse_transform(target[:,:,0].cpu()) #torch.Size([35, 1, 7])
-            prediction_humidity = scaler.inverse_transform(prediction[:,:,0].detach().cpu().numpy()) #torch.Size([35, 1, 7])
-            plot_training_3(epoch, path_to_save_predictions, src_humidity, sampled_src_humidity, prediction_humidity, index_in, index_tar)
+            sampled_src_x = scaler.inverse_transform(sampled_src_x[:,:,0].cpu())
+            sampled_src_y = scaler.inverse_transform(sampled_src_y[:,:,0].cpu())
+            src_x = scaler.inverse_transform(src[:,:,0].cpu()) #torch.Size([35, 1, 7])
+            src_y = scaler.inverse_transform(src[:,:,1].cpu())
+            target_x = scaler.inverse_transform(target[:,:,0].cpu()) #torch.Size([35, 1, 7])
+            target_y = scaler.inverse_transform(target[:,:,1].cpu()) #torch.Size([35, 1, 7])
+            prediction_x = scaler.inverse_transform(prediction_x[:,:,0].detach().cpu().numpy()) #torch.Size([35, 1, 7])
+            prediction_y = scaler.inverse_transform(prediction_y[:,:,0].detach().cpu().numpy())
+            plot_training_3(epoch, path_to_save_predictions, src_x, sampled_src_x, prediction_x, src_y, sampled_src_y, prediction_y)
 
-        train_loss /= len(dataloader)
-        log_loss(train_loss, path_to_save_loss, train=True)
+        train_loss_x /= len(dataloader)
+        train_loss_y /= len(dataloader)
+        log_loss(train_loss_x, train_loss_y, path_to_save_loss, train=True)
 
     plot_loss(path_to_save_loss, train=True)
     return best_model
