@@ -1,7 +1,7 @@
 import os, shutil
 
 # save train or validation loss
-def log_loss(loss_val : float, path_to_save_loss : str, train : bool = True):
+def log_loss(loss_val_x : float, path_to_save_loss : str, train : bool = True):
     if train:
         file_name = "train_loss.txt"
     else:
@@ -10,7 +10,7 @@ def log_loss(loss_val : float, path_to_save_loss : str, train : bool = True):
     path_to_file = path_to_save_loss+file_name
     os.makedirs(os.path.dirname(path_to_file), exist_ok=True)
     with open(path_to_file, "a") as f:
-        f.write(str(loss_val)+"\n")
+        f.write(str(loss_val_x) +"\n")
         f.close()
 
 # Exponential Moving Average, https://en.wikipedia.org/wiki/Moving_average

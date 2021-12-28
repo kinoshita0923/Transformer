@@ -9,10 +9,10 @@ def process_data(source):
 
     df = pd.read_csv(source)
         
-    timestamps = [ts.split('+')[0] for ts in  df['timestamp']]
-    timestamps_hour = np.array([float(datetime.datetime.strptime(t, '%Y-%m-%d %H:%M:%S').hour) for t in timestamps])
-    timestamps_day = np.array([float(datetime.datetime.strptime(t, '%Y-%m-%d %H:%M:%S').day) for t in timestamps])
-    timestamps_month = np.array([float(datetime.datetime.strptime(t, '%Y-%m-%d %H:%M:%S').month) for t in timestamps])
+    flame_id = [ts.split('+')[0] for ts in  df['flame_id']]
+    # timestamps_hour = np.array([float(datetime.datetime.strptime(t, '%Y-%m-%d %H:%M:%S').hour) for t in flame_id])
+    # timestamps_day = np.array([float(datetime.datetime.strptime(t, '%Y-%m-%d %H:%M:%S').day) for t in flame_id])
+    # timestamps_month = np.array([float(datetime.datetime.strptime(t, '%Y-%m-%d %H:%M:%S').month) for t in flame_id])
 
     hours_in_day = 24
     days_in_month = 30
