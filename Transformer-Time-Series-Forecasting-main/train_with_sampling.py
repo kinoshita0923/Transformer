@@ -27,7 +27,7 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
 
     model = Transformer().double().to(device)
     optimizer = torch.optim.Adam(model.parameters())
-    # scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=200)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=200)
     criterion = torch.nn.MSELoss()
     best_model = ""
     min_train_loss_x = float('inf')
@@ -73,10 +73,8 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
                     prob_true_val = True
                 else:
                     ## coin flip
-                    v = k / (k + math.exp(
-                        epoch / k))  # probability of heads/tails depends on the epoch, evolves with time.
-                    prob_true_val = flip_from_probability(
-                        v)  # starts with over 95 % probability of true val for each flip in epoch 0.
+                    v = k / (k + math.exp(epoch / k))  # probability of heads/tails depends on the epoch, evolves with time.
+                    prob_true_val = flip_from_probability(v)  # starts with over 95 % probability of true val for each flip in epoch 0.
                     ## if using true value as new value
 
                 if prob_true_val:  # Using true value as next value
@@ -98,20 +96,17 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
             train_loss_x += loss_x.detach().item()
             train_loss_y += loss_y.detach().item()
 
-        if train_loss_x < min_train_loss_x:
+        if train_loss_x < min_train_loss_x or train_loss_y < min_train_loss_y:
             torch.save(model.state_dict(), path_to_save_model + f"best_train_{epoch}.pth")
             torch.save(optimizer.state_dict(), path_to_save_model + f"optimizer_{epoch}.pth")
-            min_train_loss_x = train_loss_x
             best_model = f"best_train_{epoch}.pth"
-
-        if train_loss_y < min_train_loss_y:
-            torch.save(model.state_dict(), path_to_save_model + f"best_train_{epoch}.pth")
-            torch.save(optimizer.state_dict(), path_to_save_model + f"optimizer_{epoch}.pth")
-            min_train_loss_y = train_loss_y
-            best_model = f"best_train_{epoch}.pth"
+            if train_loss_x < min_train_loss_x:
+                min_train_loss_x = train_loss_x
+            if train_loss_y < min_train_loss_y:
+                min_train_loss_y = train_loss_y
 
         if epoch % 10 == 0:
-            logger.info(f"Epoch: {epoch}, Training loss: {train_loss_x}")
+            logger.info(f"Epoch: {epoch}, Training loss: {train_loss_x, train_loss_y}")
             scaler = load('scalar_item.joblib')
             sampled_src_x = scaler.inverse_transform(sampled_src_x[:, :, 0].cpu())
             sampled_src_y = scaler.inverse_transform(sampled_src_y[:, :, 1].cpu())
@@ -127,7 +122,7 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
 
         train_loss_x /= len(dataloader)
         train_loss_y /= len(dataloader)
-        log_loss(train_loss_x, path_to_save_loss, train=True)
+        log_loss(train_loss_x, train_loss_y, path_to_save_loss, train=True)
 
     plot_loss(path_to_save_loss, train=True)
     return best_model
