@@ -46,12 +46,11 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
             optimizer.zero_grad()
             src = _input.permute(1, 0, 2).double().to(device)[:-1, :, :]
             target = _input.permute(1, 0, 2).double().to(device)[1:, :, :]
-            sampled_src_x = src[:1, :, :]
-            sampled_src_y = src[1:2, :, :]
+            sampled_src = src[:1, :, :]
 
             for i in range(len(target) - 1):
 
-                prediction = model(sampled_src_x, device)
+                prediction = model(sampled_src, device)
                 prediction_x = prediction[:, :, 0]
                 prediction_y = prediction[:, :, 1]
 
@@ -68,7 +67,7 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
                 # optimizer.step()
                 """
 
-                if i < 24:  # One day, enough data to make inferences about cycles
+                if i < 480:  # One day, enough data to make inferences about cycles
                     prob_true_val = True
                 else:
                     ## coin flip
@@ -79,14 +78,12 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
                     ## if using true value as new value
 
                 if prob_true_val:  # Using true value as next value
-                    sampled_src_x = torch.cat((sampled_src_x.detach(), src[i + 1, :, :].unsqueeze(0).detach()))
-                    sampled_src_y = torch.cat((sampled_src_y.detach(), src[i + 1, :, :].unsqueeze(0).detach()))
+                    sampled_src = torch.cat((sampled_src.detach(), src[i + 1, :, :].unsqueeze(0).detach()))
                 else:  ## using prediction as new value
                     positional_encodings_new_val = src[i + 1, :, 1:].unsqueeze(0)
                     predicted_x = torch.cat(((prediction_x[-1, :].unsqueeze(1)).unsqueeze(1), positional_encodings_new_val), dim=2)
                     predicted_y = torch.cat(((prediction_y[-1, :].unsqueeze(1)).unsqueeze(1), positional_encodings_new_val), dim=2)
-                    sampled_src_x = torch.cat((sampled_src_x.detach(), predicted_x.detach()))
-                    sampled_src_y = torch.cat((sampled_src_y.detach(), predicted_y.detach()))
+                    sampled_src = torch.cat((sampled_src.detach(), predicted_x.detach()))
 
             """To update model after each sequence"""
             loss_x = criterion(target[:-1, :, 0].unsqueeze(-1), prediction_x)
@@ -103,8 +100,8 @@ def transformer(dataloader, EPOCH, k, frequency, path_to_save_model, path_to_sav
         if epoch % 10 == 0:
             logger.info(f"Epoch: {epoch}, Training loss: {train_loss_x}")
             scaler = load('scalar_item.joblib')
-            sampled_src_x = scaler.inverse_transform(sampled_src_x[:, :, 0].cpu())
-            sampled_src_y = scaler.inverse_transform(sampled_src_y[:, :, 1].cpu())
+            sampled_src_x = scaler.inverse_transform(sampled_src[:, :, 0].cpu())
+            sampled_src_y = scaler.inverse_transform(sampled_src[:, :, 1].cpu())
             src_x = scaler.inverse_transform(src[:, :, 0].cpu())  # torch.Size([35, 1, 7])
             src_y = scaler.inverse_transform(src[:, :, 1].cpu())
             target_x = scaler.inverse_transform(target[:, :, 0].cpu())  # torch.Size([35, 1, 7])

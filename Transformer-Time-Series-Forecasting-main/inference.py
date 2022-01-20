@@ -56,7 +56,7 @@ def inference(path_to_save_predictions, forecast_window, dataloader, device, pat
                 true = torch.cat((src[1:,:,0],target[:-1,:,0]))
                 loss = criterion(true, all_predictions[:,:,0])
                 val_loss += loss
-            
+
             val_loss = val_loss/10
             scaler = load('scalar_item.joblib')
             src_x = scaler.inverse_transform(src[:,:,0].cpu())
@@ -68,3 +68,19 @@ def inference(path_to_save_predictions, forecast_window, dataloader, device, pat
             plot_prediction(plot, path_to_save_predictions, src_x, target_x, prediction_x, src_y, target_y, prediction_y, index_in, index_tar)
 
         logger.info(f"Loss On Unseen Dataset: {val_loss.item()}")
+
+        diference_x = all_predictions[0, 0, 0] - src[0, 0, 0]
+        diference_y = all_predictions[0, 0, 1] - src[0, 0, 1]
+
+        if diference_x > 0.5:
+            print("腕を広げすぎ")
+        elif diference_x < -0.5:
+            print("腕を広げよう")
+
+        if diference_y > 0.5:
+            print("腕を上げすぎ")
+        elif diference_y < -0.5:
+            print("腕を下げすぎ")
+
+        if diference_x < 0.5 and diference_x > -0.5 and diference_y < 0.5 and diference_y > -0.5:
+            print("成功")
