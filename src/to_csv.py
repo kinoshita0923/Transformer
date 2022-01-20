@@ -35,7 +35,7 @@ def write_csv():
 def to_csv():
     global reindexed_id, files
     data.append(['flame_id', 'reindexed_id', 'x', 'y', 'credibility'])
-    for img_number in range(5496, 5504, 1):
+    for img_number in range(5501, 5504, 1):
         files = glob.glob("../json/iMG_" + str(img_number) + "*")
         read_json(i)
         reindexed_id += 1

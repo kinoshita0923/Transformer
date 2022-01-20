@@ -13,7 +13,7 @@ def main(
     k: int = 60,
     batch_size: int = 1,
     frequency: int = 100,
-    training_length = 48,
+    training_length = 20,
     forecast_window = 24,
     train_csv = "train_dataset.csv",
     test_csv = "test_dataset.csv",
@@ -35,7 +35,7 @@ def main(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--epoch", type=int, default=1000)
+    parser.add_argument("--epoch", type=int, default=20)
     parser.add_argument("--k", type=int, default=60)
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--frequency", type=int, default=100)

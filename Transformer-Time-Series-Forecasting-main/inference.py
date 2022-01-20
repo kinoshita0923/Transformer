@@ -59,9 +59,12 @@ def inference(path_to_save_predictions, forecast_window, dataloader, device, pat
             
             val_loss = val_loss/10
             scaler = load('scalar_item.joblib')
-            src_humidity = scaler.inverse_transform(src[:,:,0].cpu())
-            target_humidity = scaler.inverse_transform(target[:,:,0].cpu())
-            prediction_humidity = scaler.inverse_transform(all_predictions[:,:,0].detach().cpu().numpy())
-            plot_prediction(plot, path_to_save_predictions, src_humidity, target_humidity, prediction_humidity, index_in, index_tar)
+            src_x = scaler.inverse_transform(src[:,:,0].cpu())
+            src_y = scaler.inverse_transform(src[:,:,1].cpu())
+            target_x = scaler.inverse_transform(target[:,:,0].cpu())
+            target_y = scaler.inverse_transform(target[:,:,1].cpu())
+            prediction_x = scaler.inverse_transform(all_predictions[:,:,0].detach().cpu().numpy())
+            prediction_y = scaler.inverse_transform(all_predictions[:,:,1].detach().cpu().numpy())
+            plot_prediction(plot, path_to_save_predictions, src_x, target_x, prediction_x, src_y, target_y, prediction_y, index_in, index_tar)
 
         logger.info(f"Loss On Unseen Dataset: {val_loss.item()}")
