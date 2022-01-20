@@ -22,7 +22,7 @@ def plot_loss(path_to_save, train=True):
     plt.savefig(path_to_save+f"/{title}.png")
     plt.close()
 
-def plot_prediction(title, path_to_save, src, tgt, prediction, index_in, index_tar):
+def plot_prediction(title, path_to_save, src_x, tgt_x, prediction_x, src_y, tgt_y, prediction_y, index_in, index_tar):
 
     idx_scr = index_in[0, 1:].tolist()
     idx_tgt = index_tar[0].tolist()
@@ -36,16 +36,19 @@ def plot_prediction(title, path_to_save, src, tgt, prediction, index_in, index_t
     # prediction = np.append(src[-1], prediction.flatten())
 
     # plotting
-    plt.plot(idx_scr, src, '-', color = 'blue', label = 'Input', linewidth=2)
-    plt.plot(idx_tgt, tgt, '-', color = 'indigo', label = 'Target', linewidth=2)
-    plt.plot(idx_pred, prediction,'--', color = 'limegreen', label = 'Forecast', linewidth=2)
+    plt.plot(idx_scr, src_x, '-', color = 'blue', label = 'Input_x', linewidth=2)
+    plt.plot(idx_tgt, tgt_x, '-', color = 'indigo', label = 'Target_x', linewidth=2)
+    plt.plot(idx_pred, prediction_x,'--', color = 'limegreen', label = 'Coordinate_x', linewidth=2)
+    plt.plot(idx_scr, src_y, '-', color = 'purple', label = 'Input_y', linewidth=2)
+    plt.plot(idx_tgt, tgt_y, '-', color = 'orange', label = 'Target_y', linewidth=2)
+    plt.plot(idx_pred, prediction_y,'--', color = 'green', label = 'Coordinate_y', linewidth=2)
 
     #formatting
     plt.grid(b=True, which='major', linestyle = 'solid')
     plt.minorticks_on()
     plt.grid(b=True, which='minor', linestyle = 'dashed', alpha=0.5)
-    plt.xlabel("Time Elapsed")
-    plt.ylabel("Humidity (%)")
+    plt.xlabel("Flame")
+    plt.ylabel("Coordinate")
     plt.legend()
     
     # save
