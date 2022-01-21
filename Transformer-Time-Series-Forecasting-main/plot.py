@@ -103,6 +103,6 @@ def plot_training_3(epoch, path_to_save, src_x, sampled_src_x, prediction_x, src
     plt.plot(idx_pred_y, prediction_y, 'o-.', color='green', label='prediction sequence y', linewidth=1)
     plt.xlabel("flame")
     plt.ylabel("Coordinate")
-    plt.legend()
+    plt.legend(bbox_to_anchor=(1, 1), loc='upper right', borderaxespad=1, fontsize=18)
     plt.savefig(path_to_save+f"/Epoch_{str(epoch)}.png")
     plt.close()
