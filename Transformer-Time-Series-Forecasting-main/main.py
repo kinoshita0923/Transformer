@@ -13,7 +13,7 @@ def main(
     k: int = 60,
     batch_size: int = 1,
     frequency: int = 100,
-    training_length = 20,
+    training_length = 48,
     forecast_window = 24,
     train_csv = "train_dataset.csv",
     test_csv = "test_dataset.csv",
